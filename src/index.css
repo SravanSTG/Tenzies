@@ -1,13 +1,79 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #0b2434;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  background-color: #f5f5f5;
+  height: 600px;
+  width: 1200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.instruction-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.title {
+  color: rgba(43, 40, 58, 1);
+  font-size: 2.4rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.instructions {
+  color: rgba(74, 78, 116, 1);
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.container {
+  background-color: #f5f5f5;
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 50px;
+}
+
+.die {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.die h2 {
+  font-size: 2rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+
+.roll-btn {
+  height: 50px;
+  width: 125px;
+  background-color: #5035ff;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 6px;
 }
