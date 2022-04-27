@@ -6,12 +6,13 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
+  min-height: 100vh;
 }
 
 main {
   background-color: #f5f5f5;
   height: 600px;
-  width: 1200px;
+  width: 1000px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -36,7 +37,8 @@ main {
   margin: 0;
 }
 
-.instructions {
+.instructions,
+.roll-handler > p {
   color: rgba(74, 78, 116, 1);
   font-family: "Inter";
   font-weight: 400;
@@ -64,6 +66,12 @@ main {
   font-size: 2rem;
   font-family: "Karla", sans-serif;
   font-weight: 700;
+}
+
+.roll-handler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .roll-btn {

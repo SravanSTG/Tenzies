@@ -7,6 +7,7 @@ import "./index.css";
 function App() {
   const [dice, setDice] = React.useState(allNewDice());
   const [tenzies, setTenzies] = React.useState(false);
+  const [rolls, setRolls] = React.useState(0);
 
   React.useEffect(() => {
     const heldDice = dice.filter((die) => die.isHeld);
@@ -17,6 +18,7 @@ function App() {
 
     if (checkEqual) {
       setTenzies(true);
+      setRolls(0);
       console.log("You won");
     }
   }, [dice]);
@@ -55,6 +57,7 @@ function App() {
               };
         })
       );
+      setRolls((prevRolls) => prevRolls + 1);
     } else {
       setTenzies(false);
       setDice(allNewDice());
@@ -79,9 +82,12 @@ function App() {
         </p>
       </div>
       <div className="container">{diceElements}</div>
-      <button className="roll-btn" onClick={rollDice}>
-        {tenzies ? "New Game" : "Roll"}
-      </button>
+      <div className="roll-handler">
+        <button className="roll-btn" onClick={rollDice}>
+          {tenzies ? "New Game" : "Roll"}
+        </button>
+        <p>Rolls: {rolls}</p>
+      </div>
       {tenzies && <Confetti />}
     </main>
   );
